@@ -1,23 +1,64 @@
 import { useState } from "react";
 
 const technologies = [
-  { name: "Scratch", emoji: "🐱", color: "#FF8C00" },
-  { name: "VS Code", emoji: "💻", color: "#007ACC" },
-  { name: "Tinkercad", emoji: "🔧", color: "#FF6B35" },
-  { name: "Minecraft EDU", emoji: "⛏️", color: "#4CAF50" },
-  { name: "LEGO Education", emoji: "🧱", color: "#FFCF00" },
-  { name: "MakeBlock", emoji: "🤖", color: "#00A3E0" },
-  { name: "Thunkable", emoji: "📱", color: "#7C3AED" },
-  { name: "MIT App Inventor", emoji: "📲", color: "#E91E63" },
-  { name: "Code.org", emoji: "🌐", color: "#00BCD4" },
-  { name: "Roblox Studio", emoji: "🎮", color: "#E53E3E" },
-  { name: "British Council", emoji: "🇬🇧", color: "#002D7E" },
-  { name: "Micro:bit", emoji: "⚡", color: "#1E88E5" },
-  { name: "Cloud Tools", emoji: "☁️", color: "#00ACC1" },
-  { name: "ChatGPT / AI", emoji: "🧠", color: "#10A37F" },
-  { name: "GameMaker", emoji: "🕹️", color: "#9C27B0" },
-  { name: "Google Colab", emoji: "📊", color: "#F4B400" },
-  { name: "Unity", emoji: "🎯", color: "#424242" },
+  { 
+    name: "Scratch", 
+    image: "https://cdn.simpleicons.org/scratch/4D97FF", 
+    color: "#FF8C00" 
+  },
+  { 
+    name: "Python", 
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg", 
+    color: "#3776AB" 
+  },
+  { 
+    name: "Roblox", 
+    image: "https://cdn.simpleicons.org/roblox/111111", 
+    color: "#000000" 
+  },
+  { 
+    name: "Unity", 
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg", 
+    color: "#424242" 
+  },
+  { 
+    name: "HTML / CSS", 
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg", 
+    color: "#E34F26" 
+  },
+  { 
+    name: "JavaScript", 
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg", 
+    color: "#F7DF1E" 
+  },
+  { 
+    name: "Canva", 
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg", 
+    color: "#00C4CC" 
+  },
+  { 
+    name: "Tinkercad", 
+    image: "https://cdn.iconscout.com/icon/free/png-256/free-tinkercad-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-6-pack-logos-icons-2945199.png?f=webp&w=256", 
+    color: "#0055A4" 
+  },
+  { 
+    // CORRECCIÓN: Se cambió de Wikimedia (bloqueado) a SimpleIcons (permitido por tu red)
+    name: "Micro:bit", 
+    image: "https://cdn.simpleicons.org/microbit/00D800", 
+    color: "#00D800" 
+  },
+  { 
+    // CORRECCIÓN: Se usa la G clásica de Google desde Devicon que es 100% estable
+    name: "Google Suite", 
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg", 
+    color: "#4285F4" 
+  },
+{ 
+    name: "ChatGPT / OpenAI", 
+    // ALTERNATIVA: Usando Icons8 si el anterior es bloqueado por el firewall
+    image: "https://img.icons8.com/ios-filled/512/10A37F/chatgpt.png", 
+    color: "#10A37F" 
+  },
 ];
 
 // Duplicate for infinite loop
@@ -27,25 +68,16 @@ export function TechScroll() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <div className="relative overflow-hidden" style={{ padding: "8px 0" }}>
-      {/* Fade edges */}
+    <div 
+      className="relative overflow-hidden" 
+      style={{ 
+        padding: "8px 0",
+        WebkitMaskImage: "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
+        maskImage: "linear-gradient(to right, transparent, black 15%, black 85%, transparent)"
+      }}
+    >
       <div
-        className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
-        style={{
-          background:
-            "linear-gradient(to right, #0A0F1E, transparent)",
-        }}
-      />
-      <div
-        className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
-        style={{
-          background:
-            "linear-gradient(to left, #0A0F1E, transparent)",
-        }}
-      />
-
-      <div
-        className="flex gap-4"
+        className="flex gap-4 items-center"
         style={{
           animation: "scrollTech 35s linear infinite",
           width: "max-content",
@@ -57,39 +89,47 @@ export function TechScroll() {
           ((e.currentTarget as HTMLElement).style.animationPlayState = "running")
         }
       >
-        {allTechs.map((tech, i) => (
-          <div
-            key={`${tech.name}-${i}`}
-            className="flex flex-col items-center gap-2 px-5 py-4 rounded-2xl cursor-pointer shrink-0"
-            style={{
-              background:
-                hoveredIndex === i
-                  ? `rgba(${hexToRgb(tech.color)}, 0.15)`
-                  : "rgba(255,255,255,0.04)",
-              border: `1px solid ${
-                hoveredIndex === i
-                  ? tech.color + "55"
-                  : "rgba(255,255,255,0.08)"
-              }`,
-              transition: "all 0.3s ease",
-              transform: hoveredIndex === i ? "translateY(-4px)" : "none",
-            }}
-            onMouseEnter={() => setHoveredIndex(i)}
-            onMouseLeave={() => setHoveredIndex(null)}
-          >
-            <span style={{ fontSize: "1.8rem" }}>{tech.emoji}</span>
-            <span
-              className="text-xs whitespace-nowrap"
+        {allTechs.map((tech, i) => {
+          const isHovered = hoveredIndex === i;
+          
+          return (
+            <div
+              key={`${tech.name}-${i}`}
+              className={`flex flex-col items-center justify-center gap-2 px-5 py-4 w-28 h-28 rounded-2xl cursor-pointer shrink-0 transition-all duration-300 
+                ${!isHovered && "bg-black/5 dark:bg-white/5 border-black/10 dark:border-white/10 border"}`}
               style={{
-                color: hoveredIndex === i ? tech.color : "rgba(255,255,255,0.4)",
-                transition: "color 0.3s ease",
-                fontWeight: hoveredIndex === i ? 600 : 400,
+                background: isHovered
+                  ? `rgba(${hexToRgb(tech.color)}, 0.15)`
+                  : "var(--tw-bg-opacity, transparent)",
+                border: `1px solid ${
+                  isHovered ? tech.color + "55" : "transparent"
+                }`,
+                transform: isHovered ? "translateY(-4px)" : "none",
               }}
+              onMouseEnter={() => setHoveredIndex(i)}
+              onMouseLeave={() => setHoveredIndex(null)}
             >
-              {tech.name}
-            </span>
-          </div>
-        ))}
+              <img 
+                src={tech.image} 
+                alt={`${tech.name} logo`} 
+                className="w-10 h-10 object-contain drop-shadow-sm transition-transform duration-300"
+                style={{
+                  transform: isHovered ? "scale(1.1)" : "scale(1)"
+                }}
+              />
+              <span
+                className="text-xs whitespace-nowrap transition-colors duration-300"
+                style={{
+                  color: isHovered ? tech.color : "currentColor",
+                  fontWeight: isHovered ? 600 : 400,
+                  opacity: isHovered ? 1 : 0.6,
+                }}
+              >
+                {tech.name}
+              </span>
+            </div>
+          );
+        })}
       </div>
 
       <style>{`
@@ -105,6 +145,6 @@ export function TechScroll() {
 function hexToRgb(hex: string): string {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   return result
-    ? `${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}`
+    ? `${parseInt(result, 16)}, ${parseInt(result, 16)}, ${parseInt(result, 16)}`
     : "0,0,0";
 }

@@ -8,104 +8,46 @@ import heroImage from "figma:asset/b9b6a31b6ab0f80fc7f803edaca8cd213b948276.png"
 
 const ADULT_IMG = "https://images.unsplash.com/photo-1724260793422-7754e5d06fbe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600";
 
-type Category = "todos" | "programacion" | "ia" | "web" | "datos";
+type Category = "todos" | "alfabetizacion" | "ia";
 
+// CATÁLOGO LIMPIO: Solo adultos individuales (Corporativo migró a su propia sección)
 const courses = [
   {
-    id: "python-basico",
-    title: "Python para Principiantes",
-    desc: "Aprende el lenguaje de programación más popular del mundo. Sin experiencia previa requerida.",
-    age: "18+ años",
+    id: "alfabetizacion-adultos",
+    title: "Alfabetización Digital (Adultos)",
+    desc: "Se familiarizan paso a paso con computadoras, celulares y herramientas digitales básicas en un ambiente seguro y paciente.",
+    age: "18-99 años",
     level: "Básico",
-    duration: "12 semanas",
-    modality: "Online / Presencial",
-    techs: ["Python", "VS Code", "Google Colab"],
-    category: "programacion" as Category,
-    color: "#00C9FF",
+    duration: "8 meses +",
+    modality: "Presencial",
+    techs: ["Navegación", "Correo", "Apps"],
+    category: "alfabetizacion" as Category,
+    color: "#FF6B35",
     img: ADULT_IMG,
-    emoji: "🐍",
-    algorithmics: true,
+    emoji: "💻",
+    algorithmics: false,
   },
   {
-    id: "web-html-css",
-    title: "Desarrollo Web: HTML, CSS y JS",
-    desc: "Construye sitios web modernos desde cero. Práctica real con proyectos desde el primer día.",
+    id: "ia-adultos",
+    title: "Inteligencia artificial (adultos)",
+    desc: "Sesiones individuales y personalizadas (consultoría) para aplicar herramientas de IA en el contexto profesional.",
     age: "18+ años",
-    level: "Básico-Intermedio",
-    duration: "16 semanas",
-    modality: "Online",
-    techs: ["HTML", "CSS", "JavaScript", "VS Code"],
-    category: "web" as Category,
-    color: "#7C3AED",
-    img: ADULT_IMG,
-    emoji: "🌐",
-    algorithmics: true,
-  },
-  {
-    id: "ia-aplicada",
-    title: "IA Aplicada con ChatGPT",
-    desc: "Domina las herramientas de IA más relevantes del mercado. Perfecto para profesionales.",
-    age: "18+ años",
-    level: "Básico",
-    duration: "8 semanas",
-    modality: "Online",
-    techs: ["ChatGPT", "Google Colab", "Python"],
+    level: "Personalizado",
+    duration: "8 meses +",
+    modality: "Presencial",
+    techs: ["Herramientas IA", "Prompts", "Consultoría"],
     category: "ia" as Category,
     color: "#10B981",
     img: ADULT_IMG,
     emoji: "🧠",
-    algorithmics: true,
-  },
-  {
-    id: "data-analytics",
-    title: "Análisis de Datos",
-    desc: "Aprende a extraer insights de datos con Python, Pandas y visualización profesional.",
-    age: "18+ años",
-    level: "Intermedio",
-    duration: "14 semanas",
-    modality: "Online",
-    techs: ["Python", "Pandas", "Excel", "Power BI"],
-    category: "datos" as Category,
-    color: "#F59E0B",
-    img: ADULT_IMG,
-    emoji: "📊",
-  },
-  {
-    id: "alfabetizacion-digital",
-    title: "Alfabetización Digital",
-    desc: "Para adultos mayores o principiantes absolutos. Domina la tecnología básica con confianza.",
-    age: "18+ años",
-    level: "Básico",
-    duration: "6 semanas",
-    modality: "Presencial",
-    techs: ["Cloud Tools", "MS Office"],
-    category: "programacion" as Category,
-    color: "#06B6D4",
-    img: ADULT_IMG,
-    emoji: "💡",
-  },
-  {
-    id: "react-advanced",
-    title: "React Avanzado",
-    desc: "Desarrollo frontend profesional con React, Next.js y las mejores prácticas de la industria.",
-    age: "18+ años",
-    level: "Avanzado",
-    duration: "16 semanas",
-    modality: "Online",
-    techs: ["React", "Next.js", "TypeScript", "Tailwind"],
-    category: "web" as Category,
-    color: "#8B5CF6",
-    img: ADULT_IMG,
-    emoji: "⚛️",
-  },
+    algorithmics: false,
+  }
 ];
 
 const categories: { id: Category | "todos"; label: string; emoji: string }[] = [
   { id: "todos", label: "Todos", emoji: "💼" },
-  { id: "programacion", label: "Programación", emoji: "💻" },
-  { id: "web", label: "Desarrollo Web", emoji: "🌐" },
+  { id: "alfabetizacion", label: "Alfabetización", emoji: "💻" },
   { id: "ia", label: "Inteligencia Artificial", emoji: "🧠" },
-  { id: "datos", label: "Datos", emoji: "📊" },
 ];
 
 export function CursosAdultos() {
@@ -159,7 +101,7 @@ export function CursosAdultos() {
                   }}
                 >
                   <Briefcase size={14} className="text-[#00C9FF]" />
-                  <span className="text-[#00C9FF] font-semibold">Educación Profesional</span>
+                  <span className="text-[#00C9FF] font-semibold">Educación Continua</span>
                 </div>
 
                 {/* Título */}
@@ -180,21 +122,21 @@ export function CursosAdultos() {
                       WebkitTextFillColor: "transparent",
                     }}
                   >
-                    Carrera Tech
+                    Desarrollo Digital
                   </span>
                 </h1>
 
                 <p className="text-gray-600 dark:text-white/60 mb-8 text-lg leading-relaxed max-w-xl transition-colors duration-300">
-                  Programas diseñados para profesionales que buscan actualizarse,
-                  cambiar de carrera o potenciar sus habilidades digitales en el mercado actual.
+                  Programas diseñados para adultos que buscan actualizarse, perder el miedo a la tecnología, 
+                  dominar la Inteligencia Artificial o lograr inclusión digital a su propio ritmo.
                 </p>
 
                 {/* Stats profesionales */}
                 <div className="grid grid-cols-3 gap-4 mb-8">
                   {[
-                    { number: "85%", label: "Tasa de empleo", icon: TrendingUp },
-                    { number: "12 sem", label: "Duración prom.", icon: Clock },
-                    { number: "100%", label: "Online/Presencial", icon: Monitor },
+                    { number: "100%", label: "Atención paciente", icon: Users },
+                    { number: "8 meses +", label: "Duración de planes", icon: Clock },
+                    { number: "Tech", label: "Inclusión Digital", icon: TrendingUp },
                   ].map((stat) => (
                     <div
                       key={stat.label}
@@ -208,7 +150,7 @@ export function CursosAdultos() {
                       <div
                         className="text-gray-900 dark:text-white mb-1 transition-colors duration-300"
                         style={{
-                          fontSize: "1.5rem",
+                          fontSize: "1.3rem",
                           fontWeight: 700,
                         }}
                       >
@@ -270,7 +212,7 @@ export function CursosAdultos() {
                       border: theme === "dark" ? "1px solid rgba(255,255,255,0.12)" : "1px solid rgba(0,0,0,0.1)"
                     }}
                   >
-                    Test Vocacional
+                    Diagnóstico Inicial
                     <ChevronRight size={16} />
                   </Link>
                 </div>
@@ -312,35 +254,19 @@ export function CursosAdultos() {
           <AnimatedSection>
             <div className="text-center mb-12">
               <h2 className="text-gray-900 dark:text-white mb-4 transition-colors duration-300" style={{ fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 700 }}>
-                ¿Por qué elegir GOKU LAB?
+                ¿Por qué elegir GŌKU LAB?
               </h2>
               <p className="text-gray-600 dark:text-white/60 max-w-2xl mx-auto transition-colors duration-300">
-                Programas enfocados en resultados reales para tu carrera profesional
+                Soluciones enfocadas en resultados reales y atención con máxima paciencia.
               </p>
             </div>
 
             <div className="grid md:grid-cols-4 gap-6">
               {[
-                {
-                  icon: "💼",
-                  title: "Enfoque Práctico",
-                  desc: "Proyectos reales desde el primer día. Portfolio profesional garantizado."
-                },
-                {
-                  icon: "🎓",
-                  title: "Mentores Expertos",
-                  desc: "Aprende de profesionales activos en la industria tech."
-                },
-                {
-                  icon: "⏰",
-                  title: "Horarios Flexibles",
-                  desc: "Online y presencial. Adaptado a tu ritmo profesional."
-                },
-                {
-                  icon: "📜",
-                  title: "Certificación",
-                  desc: "Certificados reconocidos para impulsar tu CV."
-                }
+                { icon: "💼", title: "Enfoque Práctico", desc: "Clases dinámicas desde el primer día enfocadas en entornos reales." },
+                { icon: "🎓", title: "Mentores Expertos", desc: "Aprende de profesionales con paciencia y experiencia en el sector digital." },
+                { icon: "⏰", title: "Horarios Flexibles", desc: "Planes diseñados para adaptarse perfectamente a tus ritmos diarios." },
+                { icon: "🚀", title: "Inclusión Total", desc: "Pierde el miedo a la tecnología en un ambiente cómodo y seguro." }
               ].map((item, i) => (
                 <div
                   key={i}
@@ -355,110 +281,6 @@ export function CursosAdultos() {
                   <p className="text-gray-500 dark:text-white/50 text-sm leading-relaxed transition-colors duration-300">{item.desc}</p>
                 </div>
               ))}
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* ALGORITHMICS SECTION */}
-      <section className="py-16 px-4 bg-white dark:bg-transparent transition-colors duration-300">
-        <div className="max-w-6xl mx-auto">
-          <AnimatedSection>
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="mb-6">
-                  <img
-                    src={algorithmicsLogo}
-                    alt="Algorithmics International School of Programming"
-                    className="h-10 mb-4"
-                    style={{ filter: theme === "dark" ? "brightness(1.1)" : "brightness(0.9) grayscale(100%)" }}
-                  />
-                  <div className="flex items-center gap-2 mb-2">
-                    <Globe size={16} className="text-[#00C9FF]" />
-                    <span className="text-gray-900 dark:text-white/70 font-medium text-sm transition-colors duration-300">International School of Programming</span>
-                  </div>
-                </div>
-
-                <h3
-                  className="text-gray-900 dark:text-white mb-4 transition-colors duration-300"
-                  style={{ fontSize: "clamp(1.3rem, 2.5vw, 1.8rem)", fontWeight: 700 }}
-                >
-                  Metodología Internacional Algorithmics
-                </h3>
-
-                <p className="text-gray-600 dark:text-white/60 mb-6 leading-relaxed transition-colors duration-300">
-                  Varios programas utilizan la metodología de Algorithmics, presente en más de 70 países,
-                  con enfoque en aprendizaje práctico y resultados medibles.
-                </p>
-
-                <div className="space-y-3">
-                  {[
-                    { icon: Award, text: "Certificación reconocida internacionalmente", color: "#00C9FF" },
-                    { icon: TrendingUp, text: "Plataforma 24/7 para aprendizaje continuo", color: "#7C3AED" },
-                    { icon: Briefcase, text: "Orientado a resultados profesionales", color: "#10B981" },
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-start gap-3">
-                      <div
-                        className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
-                        style={{
-                          background: `${item.color}10`,
-                          border: `1px solid ${item.color}20`
-                        }}
-                      >
-                        <item.icon size={16} style={{ color: item.color }} />
-                      </div>
-                      <p className="text-gray-700 dark:text-white/70 pt-2 text-sm transition-colors duration-300">{item.text}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <div
-                  className="p-6 rounded-lg bg-gray-50 dark:bg-transparent shadow-sm dark:shadow-none transition-colors duration-300"
-                  style={{
-                    background: theme === "dark" ? "rgba(255,255,255,0.02)" : "#f9fafb",
-                    border: theme === "dark" ? "1px solid rgba(255,255,255,0.08)" : "1px solid rgba(0,0,0,0.05)"
-                  }}
-                >
-                  <h4 className="text-gray-500 dark:text-white/60 font-semibold mb-4 text-xs uppercase tracking-wider transition-colors duration-300">
-                    Cursos con Algorithmics
-                  </h4>
-                  <div className="space-y-2">
-                    {courses
-                      .filter(c => c.algorithmics)
-                      .map(course => (
-                        <div
-                          key={course.id}
-                          className="flex items-center justify-between p-3 rounded-lg bg-white dark:bg-transparent shadow-sm dark:shadow-none transition-colors duration-300"
-                          style={{
-                            background: theme === "dark" ? "rgba(255,255,255,0.03)" : "#ffffff",
-                            border: theme === "dark" ? "1px solid rgba(255,255,255,0.05)" : "1px solid rgba(0,0,0,0.05)"
-                          }}
-                        >
-                          <div className="flex items-center gap-3">
-                            <span className="text-xl">{course.emoji}</span>
-                            <div>
-                              <p className="text-gray-900 dark:text-white font-medium text-sm transition-colors duration-300">{course.title}</p>
-                              <p className="text-gray-400 dark:text-white/40 text-xs transition-colors duration-300">{course.duration}</p>
-                            </div>
-                          </div>
-                          <Link
-                            to={`/cursos/adultos/${course.id}`}
-                            className="text-xs px-3 py-1.5 rounded-lg font-semibold"
-                            style={{
-                              background: course.color,
-                              color: "#fff"
-                            }}
-                          >
-                            Ver
-                          </Link>
-                        </div>
-                      ))
-                    }
-                  </div>
-                </div>
-              </div>
             </div>
           </AnimatedSection>
         </div>
@@ -505,7 +327,7 @@ export function CursosAdultos() {
               <p className="text-gray-500 dark:text-white/50 transition-colors duration-300">No se encontraron cursos con esos filtros.</p>
             </div>
           ) : (
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-5 max-w-4xl mx-auto">
               {filtered.map((course, i) => (
                 <AnimatedSection key={course.id} delay={i * 60}>
                   <div
@@ -539,24 +361,17 @@ export function CursosAdultos() {
                         style={{ background: theme === "dark" ? `linear-gradient(to top, rgba(14,24,33,0.95), transparent)` : `linear-gradient(to top, rgba(255,255,255,0.9), transparent)` }}
                       />
                       <div className="absolute top-3 left-3 flex flex-col gap-1">
-                        <span
-                          className="text-xs px-2 py-1 rounded-md font-semibold"
-                          style={{ background: course.color, color: "#fff" }}
-                        >
-                          {course.level}
-                        </span>
-                        {course.algorithmics && (
+                        <div className="flex gap-1 items-center">
                           <span
-                            className="text-xs px-2 py-1 rounded-md font-semibold flex items-center gap-1 shadow-sm"
-                            style={{
-                              background: "linear-gradient(135deg, #7C3AED, #00C9FF)",
-                              color: "#fff"
-                            }}
+                            className="text-xs px-2 py-1 rounded-md font-semibold"
+                            style={{ background: course.color, color: "#fff" }}
                           >
-                            <Globe size={9} />
-                            Global
+                            {course.level}
                           </span>
-                        )}
+                          <span className="text-xs px-2 py-1 rounded-md font-semibold bg-gray-950 text-white dark:bg-white dark:text-black shadow-sm">
+                            desde $1600
+                          </span>
+                        </div>
                       </div>
                       <div className="absolute bottom-3 right-3 text-2xl drop-shadow-md">
                         {course.emoji}
@@ -580,8 +395,8 @@ export function CursosAdultos() {
                         {[
                           { icon: Clock, text: course.duration },
                           { icon: BarChart2, text: course.level },
-                          { icon: Monitor, text: course.modality.split(" / ")[0] },
-                          { icon: Users, text: "Grupos reducidos" },
+                          { icon: Monitor, text: course.modality.split(" / ") },
+                          { icon: Users, text: "Personalizado" },
                         ].map(({ icon: Icon, text }) => (
                           <div key={text} className="flex items-center gap-1.5">
                             <Icon size={12} className="text-gray-400 dark:text-white/30 transition-colors duration-300" />
@@ -592,7 +407,7 @@ export function CursosAdultos() {
 
                       {/* Techs */}
                       <div className="flex flex-wrap gap-1.5 mb-4">
-                        {course.techs.slice(0, 3).map((tech) => (
+                        {course.techs.map((tech) => (
                           <span
                             key={tech}
                             className="text-xs px-2 py-0.5 rounded-md transition-colors duration-300"
@@ -620,7 +435,7 @@ export function CursosAdultos() {
                           Ver Programa
                         </Link>
                         <a
-                          href={`https://wa.me/5612668168?text=Hola,%20me%20interesa%20el%20curso%20${encodeURIComponent(course.title)}`}
+                          href={`https://wa.me/5612668168?text=Hola,%20me%20interesa%20el%20servicio%20de%20${encodeURIComponent(course.title)}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="p-2.5 rounded-lg flex items-center justify-center bg-green-50 dark:bg-transparent transition-colors duration-300"
@@ -628,7 +443,6 @@ export function CursosAdultos() {
                             background: theme === "dark" ? "rgba(37,211,102,0.15)" : "rgba(37,211,102,0.1)",
                             color: "#25D366",
                             border: theme === "dark" ? "1px solid rgba(37,211,102,0.2)" : "1px solid rgba(37,211,102,0.1)",
-                            transition: "all 0.2s ease",
                           }}
                           onMouseEnter={(e) => {
                             e.currentTarget.style.background = "#25D366";
@@ -668,8 +482,7 @@ export function CursosAdultos() {
               Invierte en tu Futuro Profesional
             </h2>
             <p className="text-gray-600 dark:text-white/60 mb-8 max-w-xl mx-auto transition-colors duration-300">
-              Agenda una consulta gratuita y descubre cuál es el programa ideal
-              para tus objetivos profesionales.
+              Agenda una consulta gratuita y descubre cuál es el programa ideal para tus objetivos de desarrollo digital.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -697,7 +510,7 @@ export function CursosAdultos() {
                   transition: "all 0.2s ease"
                 }}
               >
-                Test Vocacional
+                Diagnóstico Consultivo
                 <ChevronRight size={16} />
               </Link>
             </div>

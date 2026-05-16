@@ -1,36 +1,9 @@
 import { Link } from "react-router";
 import { AnimatedSection } from "../components/AnimatedSection";
 import { useTheme } from "next-themes";
-import { CheckCircle, MessageCircle, ArrowRight, Star, Globe, Award, Users } from "lucide-react";
+import { CheckCircle, MessageCircle, ArrowRight } from "lucide-react";
 
 const becas = [
-  {
-    title: "Beca Talento Digital",
-    emoji: "🌟",
-    desc: "Para jóvenes de 10 a 18 años con demostrado interés en tecnología y situación económica limitante.",
-    coverage: "Hasta 80% de descuento",
-    req: ["Carta de motivación", "Documentación socioeconómica", "Entrevista de selección"],
-    color: "#00C9FF",
-    type: "Beca",
-  },
-  {
-    title: "Beca Mujer Tech",
-    emoji: "👩‍💻",
-    desc: "Promovemos la equidad de género en tecnología. Apoyo especial para mujeres que quieren iniciar en el sector tech.",
-    coverage: "Hasta 70% de descuento",
-    req: ["Autodeclaración de género", "Carta de objetivos", "Disponibilidad de horario"],
-    color: "#E91E63",
-    type: "Beca",
-  },
-  {
-    title: "Beca Comunidad",
-    emoji: "🤝",
-    desc: "Para comunidades rurales, indígenas o en situación de vulnerabilidad que quieran acceder a educación tecnológica.",
-    coverage: "Hasta 100% de descuento",
-    req: ["Documentación comunitaria", "Carta de intención", "Disponibilidad online"],
-    color: "#10B981",
-    type: "Beca",
-  },
   {
     title: "Plan Hermanos",
     emoji: "👨‍👩‍👧‍👦",
@@ -43,7 +16,7 @@ const becas = [
   {
     title: "Plan Alumni",
     emoji: "🎓",
-    desc: "Si ya eres egresado de GOKU LAB, tienes acceso especial para continuar tu formación con precios preferenciales.",
+    desc: "Si ya eres egresado de GŌKU LAB, tienes acceso especial para continuar tu formación con precios preferenciales.",
     coverage: "15-25% descuento permanente",
     req: ["Haber completado un curso previo", "Certificado de egreso", "Sin condición adicional"],
     color: "#FF6B35",
@@ -86,7 +59,7 @@ export function Becas() {
                 border: "1px solid rgba(16,185,129,0.25)",
               }}
             >
-              🎓 Becas y alianzas
+              🎓 Apoyos
             </div>
             <h1
               className="text-gray-900 dark:text-white mb-6 transition-colors duration-300"
@@ -305,10 +278,10 @@ export function Becas() {
               <h3 className="text-gray-900 dark:text-white text-2xl font-bold mb-3 transition-colors duration-300">
                 ¿Tu comunidad califica para el programa?
               </h3>
-              <p className="text-gray-600 dark:text-white/70 mb-6 max-w-2xl mx-auto transition-colors duration-300">
+              <h3 className="text-gray-600 dark:text-white/70 mb-6 max-w-2xl mx-auto transition-colors duration-300">
                 Escríbenos para saber si tu escuela, comunidad u organización puede participar
                 en "Abriendo Caminos Digitales" con becas de porcentajes variables según perfil.
-              </p>
+              </h3>
               <a
                 href="https://wa.me/5612668168?text=Quiero%20información%20sobre%20el%20programa%20Abriendo%20Caminos%20Digitales"
                 target="_blank"
@@ -525,7 +498,7 @@ export function Becas() {
               </a>
               <Link
                 to="/contacto"
-                className="flex items-center justify-center gap-2 px-10 py-4 rounded-2xl font-semibold border transition-all duration-300 text-gray-900 dark:text-white border-gray-300 dark:border-white/25 hover:bg-gray-100 dark:hover:bg-white/10"
+                className="flex items-center justify-center gap-2 px-10 py-4 rounded-2xl font-semibold border transition-all duration-300 text-gray-900 dark:text-white border-gray-300 dark:border-white/25 hover:bg-gray-100 dark:hover:bg-white/5"
               >
                 Formulario de contacto
                 <ArrowRight size={16} />

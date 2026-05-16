@@ -26,7 +26,7 @@ export function Contacto() {
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [selectedCountry, setSelectedCountry] = useState(countryOptions[0]);
+  const [selectedCountry, setSelectedCountry] = useState(countryOptions);
   const [countryMenuOpen, setCountryMenuOpen] = useState(false);
   const { theme } = useTheme();
 
@@ -130,7 +130,7 @@ export function Contacto() {
                     {
                       icon: MessageCircle,
                       label: "WhatsApp",
-                      value: "+52 (55) 1234-5678",
+                      value: "+52 (56) 1266-8168", // 👈 Corregido al mismo formato estético
                       color: "#25D366",
                       href: "https://wa.me/5612668168?text=Hola%20GOKU%20LAB,%20quiero%20agendar%20mi%20clase%20muestra",
                       action: "Escribir ahora",
@@ -138,7 +138,7 @@ export function Contacto() {
                     {
                       icon: Phone,
                       label: "Llamada",
-                      value: "+52 (55) 1234-5678",
+                      value: "+52 (56) 1266-8168", // 👈 Corregido al mismo formato estético
                       color: "#00C9FF",
                       href: "tel:+525612668168",
                       action: "Llamar",
@@ -146,9 +146,9 @@ export function Contacto() {
                     {
                       icon: Mail,
                       label: "Correo",
-                      value: "hola@gokulab.mx",
+                      value: "algorithmicsnc@outlook.com",
                       color: "#7C3AED",
-                      href: "mailto:hola@gokulab.mx",
+                      href: "mailto:algorithmicsnc@outlook.com",
                       action: "Enviar email",
                     },
                   ].map(({ icon: Icon, label, value, color, href, action }) => (
@@ -217,7 +217,7 @@ export function Contacto() {
                     <MapPin size={18} className="text-[#00C9FF] mt-0.5 shrink-0" />
                     <div className="flex-1">
                       <div className="text-gray-900 dark:text-white text-sm font-semibold transition-colors duration-300">
-                        GOKU LAB – Sede Principal
+                        GŌKU LAB – Sede Principal
                       </div>
                       <div className="text-gray-500 dark:text-white/50 text-sm mt-0.5 transition-colors duration-300">
                         Av. Insurgentes Sur 1234, Col. Del Valle,<br />
@@ -312,7 +312,7 @@ export function Contacto() {
                     <MapPin size={18} className="text-[#7C3AED] mt-0.5 shrink-0" />
                     <div className="flex-1">
                       <div className="text-gray-900 dark:text-white text-sm font-semibold transition-colors duration-300">
-                        GOKU LAB – Lomas Verdes
+                        GŌKU LAB – Lomas Verdes
                       </div>
                       <div className="text-gray-500 dark:text-white/50 text-sm mt-0.5 transition-colors duration-300">
                         Irun 123, Lomas Verdes,<br />
@@ -389,7 +389,7 @@ export function Contacto() {
                   </div>
                 </div>
 
-                {/* Centro Ezequiel Montes */}
+                {/* Sede Ezequiel Montes */}
                 <div
                   className="p-5 rounded-2xl bg-gray-50 dark:bg-transparent transition-colors duration-300"
                   style={{
@@ -611,7 +611,7 @@ export function Contacto() {
                                       className="w-full flex items-center gap-3 px-4 py-2.5 text-left hover:bg-gray-100 dark:hover:bg-white/10 transition-colors duration-200"
                                       style={{
                                         background: selectedCountry.code === country.code 
-                                          ? (theme === "dark" ? "rgba(0,201,255,0.1)" : "rgba(0,201,255,0.05)") 
+                                          ? theme === "dark" ? "rgba(0,201,255,0.1)" : "rgba(0,201,255,0.05)" 
                                           : "transparent",
                                       }}
                                     >
@@ -733,7 +733,7 @@ export function Contacto() {
                         className="flex items-center justify-center gap-3 py-4 rounded-2xl text-white font-bold"
                         style={{
                           background: loading
-                            ? (theme === "dark" ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.1)")
+                            ? theme === "dark" ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.1)"
                             : "linear-gradient(135deg, #00C9FF, #7C3AED)",
                           boxShadow: loading
                             ? "none"
@@ -792,8 +792,8 @@ export function Contacto() {
                       ¡Mensaje recibido! 🎉
                     </h3>
                     <p className="text-gray-600 dark:text-white/60 mb-6 leading-relaxed transition-colors duration-300">
-                      Alguien del equipo GOKU LAB te contactará en las próximas
-                      24 horas hábiles. Para respuesta inmediata, escríbenos
+                      Alguien del equipo GŌKU LAB te contactará en las próximas
+                      24 horas hábiles. Para respuesta inmediata, escrébenos
                       por WhatsApp.
                     </p>
                     <a

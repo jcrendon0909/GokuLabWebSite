@@ -13,84 +13,101 @@ type Category = "todos" | "programacion" | "robotica" | "diseno" | "verano";
 
 const courses = [
   {
-    id: "scratch-basico",
-    title: "Scratch para Principiantes",
-    desc: "Crea animaciones e historias interactivas con el lenguaje visual más popular para niños.",
-    age: "6–10 años",
+    id: "fundamentos-programacion",
+    title: "Fundamentos de la programación",
+    desc: "Se inician en la programación mediante ejercicios y retos gamiﬁcados y la realización de proyectos prácticos en Scratch Jr. Complementan su clase con la realización de los cuadernillos de Algorithmics, que permiten profundizar en los fundamentos de la lógica a través de atractivos ejercicios.",
+    age: "5–7 años",
     level: "Básico",
-    duration: "8 semanas",
-    modality: "Presencial / Online",
-    techs: ["Scratch", "Code.org"],
+    duration: "8 meses +", // <-- Aplicada orden directa
+    modality: "Presencial",
+    techs: ["Scratch Jr", "Lógica", "Algorithmics"],
     category: "programacion" as Category,
     color: "#FF6B35",
+    img: KIDS_IMG,
+    emoji: "🧩",
+    algorithmics: true,
+  },
+  {
+    id: "programacion-visual",
+    title: "Programación visual",
+    desc: "Comienzan a crear sus primeras animaciones y juegos complejos usando la programación por bloques y el lenguaje Scratch.",
+    age: "7–11 años",
+    level: "Básico-Intermedio",
+    duration: "8 meses +", // <-- Aplicada orden directa
+    modality: "Presencial / Online / Híbrido",
+    techs: ["Scratch", "Bloques", "Animación"],
+    category: "programacion" as Category,
+    color: "#1E88E5",
     img: KIDS_IMG,
     emoji: "🐱",
     algorithmics: true,
   },
   {
-    id: "minecraft-edu",
-    title: "Minecraft Education",
-    desc: "Programación y pensamiento computacional a través de Minecraft en un ambiente educativo.",
-    age: "8–12 años",
+    id: "robotica-1",
+    title: "Robótica I",
+    desc: "Construyen y programan robots iniciales que resuelven retos, desde movimientos básicos hasta pequeñas misiones en equipo. Aprenden principios de mecánica, sensores y programación lógica.",
+    age: "8–15 años",
     level: "Básico",
-    duration: "10 semanas",
-    modality: "Online",
-    techs: ["Minecraft EDU", "Scratch"],
-    category: "programacion" as Category,
+    duration: "8 meses +", // <-- Aplicada orden directa
+    modality: "Presencial",
+    techs: ["Sensores", "Mecánica", "Programación"],
+    category: "robotica" as Category,
     color: "#4CAF50",
     img: KIDS_IMG,
-    emoji: "⛏️",
+    emoji: "🦾",
   },
   {
-    id: "robotica-basica",
-    title: "Robótica con Micro:bit",
-    desc: "Construye y programa robots y gadgets con la tarjeta Micro:bit. ¡Aprende electrónica haciendo!",
-    age: "9–12 años",
-    level: "Básico-Intermedio",
-    duration: "12 semanas",
-    modality: "Presencial",
-    techs: ["Micro:bit", "Tinkercad"],
-    category: "robotica" as Category,
-    color: "#1E88E5",
+    id: "diseno-grafico",
+    title: "Diseño gráfico",
+    desc: "Crean proyectos visuales con ilustraciones, collages, vectores y gráficos 3D desde la primera clase, potenciando la creatividad y el pensamiento visual.",
+    age: "9–18 años",
+    level: "Todos los niveles",
+    duration: "8 meses +", // <-- Aplicada orden directa
+    modality: "Presencial / Online / Híbrido",
+    techs: ["Vectores", "3D", "Collage", "Diseño"],
+    category: "diseno" as Category,
+    color: "#E91E63",
     img: KIDS_IMG,
-    emoji: "🤖",
+    emoji: "🎨",
+    algorithmics: true,
   },
   {
-    id: "diseno-digital",
-    title: "Diseño Digital Creativo",
-    desc: "Crea logos, presentaciones y contenido visual con herramientas profesionales.",
-    age: "8–12 años",
+    id: "diseno-videojuegos-roblox",
+    title: "Diseño de videojuegos con Roblox",
+    desc: "Crean mundos y juegos desde cero, programan en Lua y presentan sus proyectos ante sus compañeros y en la comunidad digital, dominando Roblox Studio.",
+    age: "10+ años",
+    level: "Intermedio",
+    duration: "8 meses +", // <-- Aplicada orden directa
+    modality: "Presencial / Online / Híbrido",
+    techs: ["Roblox Studio", "Lua", "Diseño 3D"],
+    category: "programacion" as Category,
+    color: "#E53E3E",
+    img: KIDS_IMG,
+    emoji: "🎮",
+    algorithmics: true,
+  },
+  {
+    id: "alfabetizacion-peques",
+    title: "Alfabetización digital (Peques)",
+    desc: "Aprenden a usar los dispositivos digitales e Internet de una forma segura, aplicando herramientas útiles para la escuela en la creación de proyectos prácticos.",
+    age: "7–14 años",
     level: "Básico",
-    duration: "8 semanas",
-    modality: "Online",
-    techs: ["Canva", "VS Code"],
+    duration: "8 meses +", // <-- Aplicada orden directa
+    modality: "Presencial",
+    techs: ["Google Suite", "Mecanografía", "Ciberseguridad"],
     category: "diseno" as Category,
     color: "#9C27B0",
     img: KIDS_IMG,
-    emoji: "🎨",
-  },
-  {
-    id: "verano-ninos",
-    title: "Curso de Verano Intensivo",
-    desc: "4 semanas de programación, robótica y diseño. El mejor verano tech para tus hijos.",
-    age: "7–12 años",
-    level: "Todos los niveles",
-    duration: "4 semanas",
-    modality: "Presencial",
-    techs: ["Scratch", "Micro:bit", "Tinkercad"],
-    category: "verano" as Category,
-    color: "#FFE134",
-    img: KIDS_IMG,
-    emoji: "☀️",
-  },
+    emoji: "🖱️",
+    algorithmics: true,
+  }
 ];
 
 const categories: { id: Category | "todos"; label: string; emoji: string }[] = [
   { id: "todos", label: "Todos", emoji: "📚" },
   { id: "programacion", label: "Programación", emoji: "💻" },
   { id: "robotica", label: "Robótica", emoji: "🤖" },
-  { id: "diseno", label: "Diseño", emoji: "🎨" },
-  { id: "verano", label: "Verano", emoji: "☀️" },
+  { id: "diseno", label: "Diseño y Web", emoji: "🎨" },
 ];
 
 export function CursosNinos() {
@@ -119,7 +136,7 @@ export function CursosNinos() {
               key={i}
               className="absolute rounded-full transition-colors duration-300"
               style={{
-                background: theme === "dark" ? "#ffffff" : "#6366f1", // Estrellas oscuras en modo claro
+                background: theme === "dark" ? "#ffffff" : "#6366f1",
                 width: Math.random() * 4 + 1 + "px",
                 height: Math.random() * 4 + 1 + "px",
                 top: Math.random() * 100 + "%",
@@ -157,14 +174,6 @@ export function CursosNinos() {
             animation: "floatPlanet 18s ease-in-out infinite"
           }}
         />
-        <div
-          className="absolute bottom-20 right-1/3 w-32 h-32 rounded-full pointer-events-none"
-          style={{
-            background: "radial-gradient(circle at 30% 30%, #FB923C, #F97316)",
-            boxShadow: theme === "dark" ? "0 0 70px rgba(249,115,22,0.5), inset -8px -8px 25px rgba(0,0,0,0.3)" : "0 0 35px rgba(249,115,22,0.3), inset -8px -8px 25px rgba(0,0,0,0.1)",
-            animation: "floatPlanet 22s ease-in-out infinite reverse"
-          }}
-        />
 
         {/* Astronautas y cohetes flotantes */}
         <div
@@ -185,20 +194,10 @@ export function CursosNinos() {
         >
           👨‍🚀
         </div>
-        <div
-          className="absolute top-2/3 right-1/4 text-5xl pointer-events-none"
-          style={{
-            animation: "bounce 3s ease-in-out infinite",
-            filter: "drop-shadow(0 0 10px rgba(255,107,53,0.6))"
-          }}
-        >
-          🌟
-        </div>
 
         {/* Contenido Hero */}
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <AnimatedSection>
-            {/* Badge con brillo */}
             <div
               className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm mb-6 relative bg-white/10 dark:bg-transparent backdrop-blur-sm"
               style={{
@@ -208,11 +207,10 @@ export function CursosNinos() {
               }}
             >
               <span className="text-3xl animate-bounce">🧒</span>
-              <span className="text-gray-900 dark:text-white font-bold transition-colors duration-300">6 – 12 años</span>
+              <span className="text-gray-900 dark:text-white font-bold transition-colors duration-300">5 – 18 años</span>
               <span className="text-2xl">✨</span>
             </div>
 
-            {/* Título con efecto rainbow */}
             <h1
               className="text-gray-900 dark:text-white mb-6 relative transition-colors duration-300"
               style={{
@@ -234,20 +232,17 @@ export function CursosNinos() {
                 ¡Aprende Creando!
               </span>
               <div className="text-gray-900 dark:text-white mt-2 transition-colors duration-300" style={{ fontSize: "clamp(1.5rem, 4vw, 2.5rem)" }}>
-                Cursos Tech para Niños
+                Cursos Tech para Niños y Jóvenes
               </div>
             </h1>
 
             <p className="text-gray-700 dark:text-white/80 max-w-2xl mx-auto mb-8 text-lg leading-relaxed transition-colors duration-300">
-              Convierte tu imaginación en realidad con programación, robótica y diseño.
-              ¡Diversión garantizada! 🎮🤖🎨
+              Convierte tu imaginación en realidad con programación, robótica y diseño. ¡Diversión garantizada! 🎮🤖🎨
             </p>
 
-            {/* Segment switcher colorido */}
             <div className="flex flex-wrap justify-center gap-3 mb-6">
               {[
-                { href: "/cursos/ninos", label: "🧒 Niños (6-12)", id: "ninos", color: "#FF6B35" },
-                { href: "/cursos/adolescentes", label: "🚀 Adolescentes (13-17)", id: "adolescentes", color: "#00C9FF" },
+                { href: "/cursos/ninos", label: "🧒 Niños y Adolescentes", id: "ninos", color: "#FF6B35" },
                 { href: "/cursos/adultos", label: "👨‍💼 Adultos", id: "adultos", color: "#7C3AED" },
               ].map((item) => (
                 <Link
@@ -310,8 +305,7 @@ export function CursosNinos() {
                 </h3>
 
                 <p className="text-gray-700 dark:text-white/75 mb-6 leading-relaxed text-lg transition-colors duration-300">
-                  ¡Aprende con el mejor método del mundo! Algorithmics está en más de 70 países
-                  enseñando a niños como tú. 🚀
+                  ¡Aprende con el mejor método del mundo! Algorithmics está en más de 70 países enseñando a niños como tú. 🚀
                 </p>
 
                 <div className="space-y-3 mb-6">
@@ -476,7 +470,12 @@ export function CursosNinos() {
                       />
                       <div className="absolute top-3 left-3 flex flex-col gap-2">
                         <span
-                          className="text-xs px-3 py-1.5 rounded-full font-bold shadow-sm"
+                          className="text-xs px-3 py-1.5 rounded-full font-bold shadow-sm bg-gray-950 text-white dark:bg-white dark:text-black"
+                        >
+                          Planes desde $1600
+                        </span>
+                        <span
+                          className="text-xs px-3 py-1.5 rounded-full font-bold shadow-sm w-fit"
                           style={{
                             background: course.color,
                             color: "#fff",
@@ -484,18 +483,6 @@ export function CursosNinos() {
                         >
                           {course.level}
                         </span>
-                        {course.algorithmics && (
-                          <span
-                            className="text-xs px-3 py-1.5 rounded-full font-bold flex items-center gap-1 shadow-sm"
-                            style={{
-                              background: "linear-gradient(135deg, #7C3AED, #00C9FF)",
-                              color: "#fff",
-                            }}
-                          >
-                            <Globe size={10} />
-                            Global
-                          </span>
-                        )}
                       </div>
                       <div className="absolute bottom-3 right-3 text-4xl drop-shadow-lg">
                         {course.emoji}
@@ -606,7 +593,6 @@ export function CursosNinos() {
           borderBottom: theme === "dark" ? "3px solid rgba(255,225,52,0.4)" : "3px solid rgba(255,225,52,0.2)"
         }}
       >
-        {/* Decorative elements */}
         <div className="absolute top-10 right-10 text-6xl opacity-30 animate-bounce">🎮</div>
         <div className="absolute bottom-10 left-10 text-6xl opacity-30 animate-pulse">🤖</div>
 
@@ -654,39 +640,24 @@ export function CursosNinos() {
           0%, 100% { opacity: 0.3; transform: scale(1); }
           50% { opacity: 1; transform: scale(1.3); }
         }
-
         @keyframes floatPlanet {
           0%, 100% { transform: translateY(0px) rotate(0deg); }
           50% { transform: translateY(-40px) rotate(180deg); }
         }
-
         @keyframes floatAstronaut {
-          0% {
-            transform: translate(0, 0) rotate(-20deg);
-            opacity: 0;
-          }
+          0% { transform: translate(0, 0) rotate(-20deg); opacity: 0; }
           10% { opacity: 1; }
           90% { opacity: 1; }
-          100% {
-            transform: translate(-120vw, -60vh) rotate(-20deg);
-            opacity: 0;
-          }
+          100% { transform: translate(-120vw, -60vh) rotate(-20deg); opacity: 0; }
         }
-
         @keyframes spinFloat {
-          0%, 100% {
-            transform: translateY(0px) rotate(0deg);
-          }
-          50% {
-            transform: translateY(-30px) rotate(360deg);
-          }
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-30px) rotate(360deg); }
         }
-
         @keyframes bounce {
           0%, 100% { transform: translateY(0px) scale(1); }
           50% { transform: translateY(-15px) scale(1.1); }
         }
-
         @keyframes rainbowGradient {
           0%, 100% { background-position: 0% 50%; }
           50% { background-position: 100% 50%; }

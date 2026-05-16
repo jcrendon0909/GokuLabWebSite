@@ -63,7 +63,7 @@ function MyComponent() {
 
 ### Implementación:
 - Home page usa imágenes de Figma para secciones de niños
-- Diseño adaptado al brand de GOKU LAB
+- Diseño adaptado al brand de GŌKU LAB
 - Mantiene la estética colorida y emocional
 
 ## 4. Componentes Actualizados
@@ -107,7 +107,7 @@ className="
 4. **Más Traducciones**: Expandir traducciones a todas las páginas
 5. **Persistencia**: Guardar preferencias de idioma/tema en localStorage
 
-## Testing
+## Diagnóstico
 
 Para probar las nuevas funcionalidades:
 

@@ -1,81 +1,39 @@
 import { Link } from "react-router";
 import { AnimatedSection } from "../components/AnimatedSection";
-import { MessageCircle, Heart, Zap, Globe, Award, ChevronRight } from "lucide-react";
+import { MessageCircle, Heart, Zap, Globe, Award, ChevronRight, Users } from "lucide-react";
+import { useTheme } from "next-themes";
 
-const TEAM_IMG_1 = "https://images.unsplash.com/photo-1732210038531-9cefab37885a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b3VuZyUyMHdvbWFuJTIwZGV2ZWxvcGVyJTIwc21pbGluZyUyMHRlY2h8ZW58MXx8fHwxNzc1ODU2MjQ1fDA&ixlib=rb-4.1.0&q=80&w=400";
-const TEAM_IMG_2 = "https://images.unsplash.com/photo-1755548180551-2bac52d9467e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYW4lMjB0ZWFjaGVyJTIwdGVjaG5vbG9neSUyMGVkdWNhdGlvbiUyMHdvcmtzaG9wfGVufDF8fHx8MTc3NTg1NjI0NXww&ixlib=rb-4.1.0&q=80&w=400";
-const TEAM_IMG_3 = "https://images.unsplash.com/photo-1758270705172-07b53627dfcb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaXZlcnNlJTIwc3R1ZGVudHMlMjBsZWFybmluZyUyMGNvbXB1dGVyJTIwc2NpZW5jZSUyMHVuaXZlcnNpdHl8ZW58MXx8fHwxNzc1ODU2MjQ2fDA&ixlib=rb-4.1.0&q=80&w=400";
+// Placeholders de avatares neutros para las fotos circulares
+const AVATAR_PLACEHOLDER = "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=200";
 
 const team = [
   {
-    name: "Ana Torres",
-    role: "Directora General",
-    bio: "Ingeniera en sistemas con 12 años en educación tecnológica. Fundadora de GOKU LAB.",
-    img: TEAM_IMG_1,
-    emoji: "👩‍💼",
+    name: "Profesor Ejemplo 1",
+    role: "Especialidad Tech",
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    img: AVATAR_PLACEHOLDER,
+    emoji: "💻",
   },
   {
-    name: "Luis Mendoza",
-    role: "Director Pedagógico",
-    bio: "Especialista en metodologías activas y gamificación educativa.",
-    img: TEAM_IMG_2,
-    emoji: "👨‍🏫",
+    name: "Profesor Ejemplo 2",
+    role: "Especialidad Robótica",
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    img: AVATAR_PLACEHOLDER,
+    emoji: "🦾",
   },
   {
-    name: "Mariana Díaz",
-    role: "Coord. Niños y Adolescentes",
-    bio: "Maestra con posgrado en tecnología educativa y 8 años de experiencia.",
-    img: TEAM_IMG_3,
-    emoji: "👩‍🏫",
+    name: "Profesor Ejemplo 3",
+    role: "Especialidad Diseño",
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    img: AVATAR_PLACEHOLDER,
+    emoji: "🎨",
   },
   {
-    name: "Roberto Flores",
-    role: "Instructor Senior – IA",
-    bio: "Data Scientist con experiencia en Google. Apasionado por democratizar la IA.",
-    img: TEAM_IMG_2,
-    emoji: "👨‍💻",
-  },
-  {
-    name: "Sofía Castro",
-    role: "Instructora – Robótica",
-    bio: "Ingeniera mecatrónica. Ha guiado más de 500 proyectos de robótica con niños.",
-    img: TEAM_IMG_1,
-    emoji: "👩‍🔬",
-  },
-  {
-    name: "Eduardo Vega",
-    role: "Instructor – Desarrollo Web",
-    bio: "Full-stack developer con 10+ años. Cree que cualquier persona puede aprender a programar.",
-    img: TEAM_IMG_2,
-    emoji: "👨‍💻",
-  },
-  {
-    name: "Valeria Ruiz",
-    role: "Instructora – Diseño Digital",
-    bio: "Diseñadora UX/UI con portafolio en startups de LATAM.",
-    img: TEAM_IMG_1,
-    emoji: "👩‍🎨",
-  },
-  {
-    name: "Carlos Nava",
-    role: "Instructor – Empresas",
-    bio: "Consultor empresarial especializado en transformación digital corporativa.",
-    img: TEAM_IMG_2,
-    emoji: "👨‍💼",
-  },
-  {
-    name: "Diana Ortiz",
-    role: "Coordinadora de Eventos",
-    bio: "Organizadora de hackathons y talleres tecnológicos en 8 ciudades de México.",
-    img: TEAM_IMG_3,
-    emoji: "👩‍💻",
-  },
-  {
-    name: "Miguel Ángel Reyes",
-    role: "Instructor – Programación Avanzada",
-    bio: "Desarrollador de videojuegos y apps con 15+ años de experiencia.",
-    img: TEAM_IMG_2,
-    emoji: "🧑‍💻",
+    name: "Profesor Ejemplo 4",
+    role: "Especialidad Ciencias / IA",
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    img: AVATAR_PLACEHOLDER,
+    emoji: "🧠",
   },
 ];
 
@@ -107,8 +65,10 @@ const values = [
 ];
 
 export function Nosotros() {
+  const { theme } = useTheme();
+
   return (
-    <div>
+    <div className="bg-white dark:bg-[#0A0F1E] transition-colors duration-300">
       {/* HERO */}
       <section
         className="relative py-32 px-4 overflow-hidden bg-slate-50 dark:bg-[#050A14] transition-colors duration-300"
@@ -157,25 +117,15 @@ export function Nosotros() {
                 lineHeight: 1.15,
               }}
             >
-              Creemos en{" "}
-              <span
-                style={{
-                  background: "linear-gradient(90deg, #00C9FF, #7C3AED)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
-              >
-                superpoderes
-              </span>
+              Creemos en <span style={{ color: "#7C3AED" }}>superpoderes</span>
               <br />
-              para un{" "}
-              <span style={{ color: "#FFE134", textShadow: "0px 1px 2px rgba(0,0,0,0.1)" }}>superfuturo</span>
+              para un <span style={{ color: "#f8b50e" }}>superfuturo</span>
             </h1>
             <p
               className="text-gray-600 dark:text-white/65 max-w-2xl mx-auto transition-colors duration-300"
               style={{ fontSize: "1.15rem", lineHeight: 1.75 }}
             >
-              GOKU LAB nació de la convicción de que la tecnología puede y debe
+              GŌKU LAB nació de la convicción de que la tecnología puede y debe
               estar al alcance de todos: niños que sueñan, jóvenes que exploran,
               adultos que se reinventan y empresas que evolucionan.
             </p>
@@ -220,7 +170,7 @@ export function Nosotros() {
                 className="text-gray-600 dark:text-white/65 mb-8 leading-relaxed transition-colors duration-300"
                 style={{ fontSize: "1.05rem" }}
               >
-                Cada alumno que sale de GOKU LAB no solo sabe programar. Sabe
+                Cada alumno que sale de GŌKU LAB no solo sabe programar. Sabe
                 pensar diferente, crear soluciones y enfrentar los retos del
                 mundo digital con confianza.
               </p>
@@ -280,25 +230,85 @@ export function Nosotros() {
         </div>
       </section>
 
+      {/* SOBRE EL EQUIPO — Tarjetas Simétricas Corregidas (El badge ya no se corta) */}
+      <section className="py-24 px-4 bg-gray-50 dark:bg-[#050A14] transition-colors duration-300 border-t border-b border-gray-100 dark:border-white/5">
+        <div className="max-w-7xl mx-auto">
+          <AnimatedSection className="text-center mb-16">
+            <div
+              className="inline-block px-4 py-1.5 rounded-full text-sm mb-4 bg-purple-50 dark:bg-purple-900/20"
+              style={{
+                color: "#7C3AED",
+                border: "1px solid rgba(124,58,237,0.25)",
+              }}
+            >
+              <div className="flex items-center gap-1.5">
+                <Users size={14} />
+                <span>Sobre el equipo</span>
+              </div>
+            </div>
+            <h2
+              className="text-gray-900 dark:text-white mb-4 transition-colors duration-300"
+              style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 800 }}
+            >
+              Nuestro equipo
+            </h2>
+            <p className="text-gray-600 dark:text-white/60 max-w-2xl mx-auto text-sm transition-colors duration-300">
+              Conoce a los profesionales y guías dedicados a potenciar el desarrollo integral dentro de nuestra comunidad.
+            </p>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {team.map((member, idx) => (
+              <AnimatedSection key={idx} delay={idx * 80}>
+                <div
+                  className="p-6 rounded-3xl flex flex-col items-center text-center h-full bg-white dark:bg-[#0A0F1E] border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-md transition-all duration-300"
+                  onMouseEnter={(e) => {
+                    (e.currentTarget as HTMLElement).style.transform = "translateY(-4px)";
+                  }}
+                  onMouseLeave={(e) => {
+                    (e.currentTarget as HTMLElement).style.transform = "none";
+                  }}
+                >
+                  {/* Foto Contenedora RELATIVA externa sin overflow-hidden para que el badge flote libremente */}
+                  <div className="relative w-24 h-24 mb-4 shrink-0">
+                    {/* Contenedor INTERNO circular que sí tiene overflow-hidden para recortar la foto */}
+                    <div className="w-full h-full rounded-full overflow-hidden border-2 border-purple-500/20 flex items-center justify-center bg-gray-100 dark:bg-white/5">
+                      <img
+                        src={member.img}
+                        alt={member.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    {/* Badge absoluto exterior (visible y exacto al diseño de Figma) */}
+                    <span className="absolute -bottom-1 -right-1 bg-white dark:bg-[#111827] rounded-full shadow-md border border-gray-100 dark:border-white/10 flex items-center justify-center w-8 h-8 z-10 text-base transition-colors duration-300">
+                      {member.emoji}
+                    </span>
+                  </div>
+
+                  <h3 className="text-gray-900 dark:text-white font-extrabold text-base mb-1 transition-colors duration-300">
+                    {member.name}
+                  </h3>
+                  <span className="text-purple-600 dark:text-purple-400 text-xs font-bold uppercase tracking-wider block mb-4">
+                    {member.role}
+                  </span>
+                  <p className="text-gray-600 dark:text-white/60 text-xs leading-relaxed transition-colors duration-300">
+                    {member.bio}
+                  </p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* INSTITUTIONAL */}
       <section
         className="py-24 px-4 transition-colors duration-300 bg-white dark:bg-transparent"
         style={{
           background: "linear-gradient(135deg, rgba(0,201,255,0.05), rgba(124,58,237,0.05))",
-          borderTop: "1px solid rgba(0,201,255,0.1)",
-          borderBottom: "1px solid rgba(0,201,255,0.1)",
         }}
       >
         <div className="max-w-5xl mx-auto">
-          <AnimatedSection className="text-center mb-16">
-            <h2
-              className="text-gray-900 dark:text-white mb-4 transition-colors duration-300"
-              style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 800 }}
-            >
-              Texto institucional
-            </h2>
-          </AnimatedSection>
-
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
@@ -365,12 +375,6 @@ export function Nosotros() {
                 boxShadow: "0 8px 30px rgba(0,201,255,0.35)",
                 transition: "all 0.2s ease",
                 fontSize: "1.05rem",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "scale(1.03)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "scale(1)";
               }}
             >
               <MessageCircle size={20} />

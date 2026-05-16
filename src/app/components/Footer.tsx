@@ -1,6 +1,7 @@
 import { Link } from "react-router";
-import { Zap, MessageCircle, Instagram, Youtube, Mail, Phone, MapPin, Facebook } from "lucide-react";
+import { Instagram, Youtube, Mail, Phone, MapPin, Facebook, MessageCircle } from "lucide-react";
 import { useTheme } from "next-themes";
+import logoGoku from "../../assets/logo.png";
 
 export function Footer() {
   const { theme } = useTheme();
@@ -71,7 +72,7 @@ export function Footer() {
               Agendar por WhatsApp
             </a>
             <Link
-              to="/contacto"
+              to="/cursos"
               className="flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-bold border transition-all duration-300
                 text-white dark:text-white light:text-gray-900
                 border-white/30 dark:border-white/30 light:border-gray-300
@@ -97,31 +98,21 @@ export function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div
-                className="w-9 h-9 rounded-xl flex items-center justify-center"
-                style={{ background: "linear-gradient(135deg, #00C9FF, #7C3AED)" }}
-              >
-                <Zap size={18} className="text-white" />
-              </div>
-              <span
-                className="text-white dark:text-white light:text-gray-900 transition-colors duration-300"
-                style={{ fontSize: "1.1rem", fontWeight: 800 }}
-              >
-                GOKU{" "}
-                <span
+            <div className="flex items-center mb-6">
+              <Link to="/">
+                <img
+                  src={logoGoku}
+                  alt="GŌKU LAB"
+                  className="h-14 sm:h-16 object-contain"
                   style={{
-                    background: "linear-gradient(90deg, #00C9FF, #7C3AED)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
+                    filter: isDark ? "drop-shadow(0 0 10px rgba(0,201,255,0.15))" : "none",
+                    transition: "all 0.3s ease"
                   }}
-                >
-                  LAB
-                </span>
-              </span>
+                />
+              </Link>
             </div>
             <p className="text-white/50 dark:text-white/50 light:text-gray-600 text-sm leading-relaxed mb-5 transition-colors duration-300">
-              Academia tecnológica para niños, adolescentes, adultos y empresas.
+              Academia tecnológica para niñas, niños, adolescentes, adultos y empresas.
               Creemos en superpoderes para un superfuturo.
             </p>
             <div className="flex gap-3">
@@ -163,12 +154,9 @@ export function Footer() {
             </h4>
             <div className="flex flex-col gap-2">
               {[
-                { label: "Niños y adolescentes", href: "/cursos/ninos" },
+                { label: "Niñas, niños y adolescentes", href: "/cursos/ninos" },
                 { label: "Para adultos", href: "/cursos/adultos" },
-                { label: "Capacitaciones empresariales", href: "/capacitaciones" },
-                { label: "Programación", href: "/cursos" },
-                { label: "Robótica", href: "/cursos" },
-                { label: "Diseño", href: "/cursos" },
+                { label: "Para empresas y gobierno", href: "/capacitaciones" },
               ].map((item) => (
                 <Link
                   key={item.href + item.label}
@@ -194,9 +182,9 @@ export function Footer() {
               {[
                 { label: "Nosotros", href: "/nosotros" },
                 { label: "Metodología", href: "/metodologia" },
-                { label: "Test vocacional", href: "/test" },
+                { label: "Diagnóstico", href: "/test" },
                 { label: "Eventos", href: "/eventos" },
-                { label: "Becas y alianzas", href: "/becas" },
+                { label: "Apoyos", href: "/becas" },
                 { label: "Contacto", href: "/contacto" },
               ].map((item) => (
                 <Link
@@ -221,11 +209,11 @@ export function Footer() {
             </h4>
             <div className="flex flex-col gap-3">
               {[
-                { icon: Phone, text: "+52 (55) 1234-5678" },
-                { icon: Mail, text: "hola@gokulab.mx" },
-                { icon: MapPin, text: "Ciudad de México, México", isBold: true },
-                { icon: MapPin, text: "Lomas Verdes: Irun 123, Lomas Verdes, Naucalpan, Méx", noIcon: true },
-              ].map(({ icon: Icon, text, isBold, noIcon }, idx) => (
+                { icon: Phone, text: "5612668168" },
+                { icon: Mail, text: "algorithmicsnc@outlook.com" },
+                { icon: MapPin, text: "GŌKU LAB – Sede Principal", isBold: true }, // 👈 Corregido: Nombre oficial de la sede
+                { icon: MapPin, text: "Av. Insurgentes Sur 1234, Col. Del Valle, Ciudad de México, CDMX, 03100", noIcon: true }, // 👈 Corregido: Dirección completa del centro
+              ].map(({ icon: Icon, text, isBold, noIcon }) => (
                 <div key={text} className="flex items-start gap-3">
                   {!noIcon && <Icon size={16} className="text-[#00C9FF] mt-0.5 shrink-0" />}
                   {noIcon && <div className="w-4" />}
@@ -266,7 +254,7 @@ export function Footer() {
           }}
         >
           <p className="text-white/30 dark:text-white/30 light:text-gray-500 text-sm transition-colors duration-300">
-            © 2026 GOKU LAB. Todos los derechos reservados.
+            © 2026 GŌKU LAB. Todos los derechos reservados.
           </p>
           <div className="flex gap-5">
             {["Privacidad", "Términos", "Cookies"].map((item) => (

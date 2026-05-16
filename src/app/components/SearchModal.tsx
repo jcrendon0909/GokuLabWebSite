@@ -206,7 +206,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
             <div className="text-white/60 text-sm mb-4">Accesos rápidos</div>
             <div className="grid sm:grid-cols-3 gap-3">
               {[
-                { label: "Niños y Adolescentes", href: "/cursos/ninos", emoji: "🧒" },
+                { label: "Niñas, niños y adolescentes", href: "/cursos/ninos", emoji: "🧒" },
                 { label: "Adultos", href: "/cursos/adultos", emoji: "👨‍💼" },
                 { label: "Empresas", href: "/capacitaciones", emoji: "🏢" },
               ].map((link) => (

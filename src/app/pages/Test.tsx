@@ -199,7 +199,7 @@ export function TestPage() {
                 border: "1px solid rgba(124,58,237,0.25)",
               }}
             >
-              🎯 Test de orientación
+              🎯 Diagnóstico de orientación
             </div>
             <h1
               className="text-gray-900 dark:text-white mb-4 transition-colors duration-300"
@@ -280,7 +280,7 @@ export function TestPage() {
               </h2>
               <p className="text-gray-600 dark:text-white/60 mb-8 leading-relaxed transition-colors duration-300">
                 Responde 4 preguntas rápidas y te diremos exactamente qué curso
-                de GOKU LAB es el indicado para ti o para tu familia.
+                de GŌKU LAB es el indicado para ti o para tu familia.
               </p>
               <div className="flex flex-col gap-3 text-sm text-gray-500 dark:text-white/50 mb-8 transition-colors duration-300">
                 {["✅ Solo 4 preguntas", "✅ Resultado inmediato", "✅ 100% personalizado"].map(
@@ -301,7 +301,7 @@ export function TestPage() {
                 onMouseEnter={(e) => { e.currentTarget.style.transform = "scale(1.02)"; }}
                 onMouseLeave={(e) => { e.currentTarget.style.transform = "scale(1)"; }}
               >
-                Comenzar el test
+                Comenzar el diagnóstico
                 <ArrowRight size={20} />
               </button>
             </div>
@@ -454,7 +454,7 @@ export function TestPage() {
                 <div className="flex items-center gap-3 p-4 rounded-2xl transition-colors duration-300 bg-gray-50 dark:bg-transparent" style={{ background: theme === "dark" ? "rgba(255,255,255,0.03)" : "#f9fafb" }}>
                   <CheckCircle size={18} className="text-[#10B981] shrink-0" />
                   <p className="text-gray-600 dark:text-white/55 text-sm transition-colors duration-300">
-                    Alguien del equipo GOKU LAB revisará tus respuestas y te dará orientación personalizada.
+                    Alguien del equipo GŌKU LAB revisará tus respuestas y te dará orientación personalizada.
                   </p>
                 </div>
 
@@ -463,7 +463,7 @@ export function TestPage() {
                   className="mt-5 flex items-center gap-2 text-sm text-gray-400 dark:text-white/30 hover:text-gray-700 dark:hover:text-white/60 mx-auto transition-colors duration-300"
                 >
                   <RotateCcw size={14} />
-                  Repetir el test
+                  Repetir el diagnóstico
                 </button>
               </div>
             </div>

@@ -24,7 +24,7 @@ import imgKidsSection from "../../imports/03HomepageV3/bddc569ae394f99d6e20497e0
 import imgKidsBottom from "../../imports/03HomepageV3/044b589933d402106ef8541547b60fdeff9c753f.png";
 
 const HERO_IMG = imgKidsHero;
-const TEEN_IMG = "https://images.unsplash.com/photo-1635959952534-d99f969554a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWVuYWdlciUyMHByb2dyYW1taW5nJTIwbGFwdG9wJTIwdGVjaCUyMGNyZWF0aXZlfGVufDF8fHx8MTc3NTg1NjI0MHww&ixlib=rb-4.1.0&q=80&w=1080";
+const TEEN_IMG = "https://images.unsplash.com/photo-1635959952534-d99f969554a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWVuYWdlciUyMHByb2dyYW1taW5nJTIwbGFwdG9wJTIwdGVjaCUyMGNyZWF0aXZlfGVufDF8fHx8MT75ODU2MjQwfHA&ixlib=rb-4.1.0&q=80&w=1080";
 const ADULT_IMG = "https://images.unsplash.com/photo-1724260793422-7754e5d06fbe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZHVsdCUyMHByb2Zlc3Npb25hbCUyMGNvZGluZyUyMGNvbXB1dGVyJTIwd29ya3NwYWNlfGVufDF8fHx8MTc3NTg1NjI0MXww&ixlib=rb-4.1.0&q=80&w=1080";
 const CORP_IMG = "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjB0ZWNobm9sb2d5JTIwdHJhaW5pbmclMjB0ZWFtJTIwbWVldGluZ3xlbnwxfHx8fDE3NzU4NTYyNDF8MA&ixlib=rb-4.1.0&q=80&w=1080";
 
@@ -52,7 +52,7 @@ function SegmentCards() {
       border: "rgba(0,201,255,0.25)",
       href: "/cursos/adultos",
       img: ADULT_IMG,
-      tags: ["Python", "Web Dev", "IA Aplicada"],
+      tags: ["Alfabetización", "Inclusión Digital", "IA Consultoría"],
       emoji: "👨‍💼",
     },
     {
@@ -226,9 +226,20 @@ export function Home() {
         />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          {/* Background image */}
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url('src/assets/hero imagen.jpg')`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              opacity: 0.5,
+            }}
+          />
           {/* Badge */}
           <div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8 bg-blue-50 dark:bg-blue-900/10"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8 bg-blue-50 dark:bg-blue-990/10"
             style={{
               border: "1px solid rgba(0,201,255,0.3)",
               animation: "fadeUp 0.6s ease both",
@@ -252,33 +263,15 @@ export function Home() {
               fontFamily: "'Inter', sans-serif",
             }}
           >
-            <span
-              style={{
-                background: "linear-gradient(90deg, #00C9FF, #7C3AED, #FF6B35)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
-            >
-              Crea,
+            <span style={{ color: "#f8b50e" }}>
+              Juega,
             </span>
             <br />
-            <span
-              style={{
-                background: "linear-gradient(90deg, #00C9FF, #7C3AED, #FF6B35)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
-            >
+            <span style={{ color: "#d61a1f" }}>
               Aprende y
             </span>
             <br />
-            <span
-              style={{
-                background: "linear-gradient(90deg, #00C9FF, #7C3AED, #FF6B35)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
-            >
+            <span style={{ color: "#67a934" }}>
               Emprende
             </span>
           </h1>
@@ -349,13 +342,7 @@ export function Home() {
                 style={{ fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800 }}
               >
                 No solo consumen tecnología,{" "}
-                <span
-                  style={{
-                    background: "linear-gradient(90deg, #00C9FF, #7C3AED)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                  }}
-                >
+                <span style={{ color: "#26aaa3" }}>
                   la crean
                 </span>
               </h2>
@@ -472,18 +459,12 @@ export function Home() {
               style={{ fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800 }}
             >
               Tecnología que se{" "}
-              <span
-                style={{
-                  background: "linear-gradient(90deg, #00C9FF, #7C3AED)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
-              >
+              <span style={{ color: "#26aaa3" }}>
                 crea, no solo se consume
               </span>
             </h2>
             <p className="text-gray-600 dark:text-white/60 max-w-2xl mx-auto transition-colors duration-300" style={{ fontSize: "1.1rem" }}>
-              En GOKU LAB transformamos la manera en que aprenden los niños,
+              En GŌKU LAB transformamos la manera en que aprenden las niñas, niños,
               adolescentes, adultos y empresas con metodología práctica y
               proyectos reales.
             </p>
@@ -721,7 +702,7 @@ export function Home() {
           <AnimatedSection className="text-center mt-10" delay={400}>
             <Link
               to="/eventos"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold transition-all duration-300"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold border transition-all duration-300"
               style={{
                 background: theme === "dark" ? "rgba(255,255,255,0.04)" : "rgba(0,0,0,0.04)",
                 color: theme === "dark" ? "#fff" : "#111827",
@@ -732,6 +713,54 @@ export function Home() {
               <ArrowRight size={16} />
             </Link>
           </AnimatedSection>
+        </div>
+      </section>
+
+      {/* GALLERY SECTION — ✅ Seccion Mosaico/Grid Asimetrico Moderno */}
+      <section className="py-24 px-4 bg-gray-50 dark:bg-[#050A14] transition-colors duration-300 border-t border-gray-100 dark:border-white/5">
+        <div className="max-w-7xl mx-auto">
+          <AnimatedSection className="text-center mb-16">
+            <div
+              className="inline-block px-4 py-1.5 rounded-full text-sm mb-4 bg-purple-50 dark:bg-purple-900/10"
+              style={{
+                color: "#7C3AED",
+                border: "1px solid rgba(124,58,237,0.25)",
+              }}
+            >
+              Galería
+            </div>
+            <h2
+              className="text-gray-900 dark:text-white mb-4 transition-colors duration-300"
+              style={{ fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800 }}
+            >
+              Nuestra comunidad en <span style={{ color: "#7C3AED" }}>acción</span>
+            </h2>
+            <p className="text-gray-600 dark:text-white/60 max-w-xl mx-auto transition-colors duration-300">
+              Explora momentos de nuestros talleres, clases presenciales y proyectos creados por nuestros alumnos.
+            </p>
+          </AnimatedSection>
+
+          {/* Grid de mosaico moderno con alturas controladas por spans de Tailwind */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {[
+              { url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?crop=entropy&cs=tinysrgb&fit=crop&w=600&h=450", span: "md:col-span-2 md:row-span-2" },
+              { url: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?crop=entropy&cs=tinysrgb&fit=crop&w=600&h=600", span: "" },
+              { url: "https://images.unsplash.com/photo-1577896851231-70ef18881754?crop=entropy&cs=tinysrgb&fit=crop&w=600&h=600", span: "" },
+              { url: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?crop=entropy&cs=tinysrgb&fit=crop&w=600&h=450", span: "" },
+              { url: "https://images.unsplash.com/photo-1509062522246-3755977927d7?crop=entropy&cs=tinysrgb&fit=crop&w=600&h=450", span: "md:col-span-2" }
+            ].map((img, index) => (
+              <AnimatedSection key={index} className={img.span} delay={index * 80}>
+                <div className="relative rounded-3xl overflow-hidden h-full min-h-[240px] group shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-white/5 bg-white dark:bg-white/5">
+                  <img
+                    src={img.url}
+                    alt={`Galería GOKU LAB ${index + 1}`}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-purple-950/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -751,23 +780,13 @@ export function Home() {
               className="text-gray-900 dark:text-white mb-6 transition-colors duration-300"
               style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 900 }}
             >
-              Tu{" "}
-              <span
-                style={{
-                  background: "linear-gradient(90deg, #00C9FF, #7C3AED)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
-              >
-                superfuturo
-              </span>{" "}
-              empieza hoy
+              Tu <span style={{ color: "#26aaa3" }}>superfuturo</span> empieza hoy
             </h2>
             <p
               className="text-gray-600 dark:text-white/60 mb-10 max-w-2xl mx-auto transition-colors duration-300"
               style={{ fontSize: "1.15rem" }}
             >
-              Agenda tu diagnóstico gratuito y descubre cómo GOKU LAB puede
+              Agenda tu diagnóstico gratuito y descubre cómo GŌKU LAB puede
               transformar tu futuro (o el de tus hijos). Sin compromiso. Sin costo.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -1,4 +1,4 @@
-# Videos de Fondo para GOKU LAB
+# Videos de Fondo para GŌKU LAB
 
 ## 📹 Hero Background Video
 
@@ -19,9 +19,9 @@ Coloca aquí tu video de fondo para la sección hero del Home.
 - **Audio:** No necesario (el video se reproduce en mute)
 
 ### Contenido Sugerido
-El video debe reflejar el ambiente y la esencia de GOKU LAB:
+El video debe reflejar el ambiente y la esencia de GŌKU LAB:
 
-- ✅ Niños y adolescentes programando
+- ✅ Niñas, niños y adolescentes programando
 - ✅ Robótica educativa en acción
 - ✅ Código en pantallas
 - ✅ Ambiente de clase tecnológica

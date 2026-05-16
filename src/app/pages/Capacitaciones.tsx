@@ -49,32 +49,32 @@ const areas = [
 
 const formats = [
   {
-    title: "Taller Intensivo",
-    duration: "4–8 horas",
-    desc: "Sesión única de alto impacto para un tema específico.",
-    icon: "⚡",
-    color: "#FF6B35",
-  },
-  {
-    title: "Programa Modular",
-    duration: "4–12 semanas",
-    desc: "Aprendizaje progresivo con seguimiento y métricas.",
-    icon: "📚",
+    title: "Programa Modular Online",
+    duration: "8 meses +",
+    desc: "Aprendizaje progresivo con seguimiento y métricas para tu equipo remoto.",
+    icon: "🌐",
     color: "#00C9FF",
   },
   {
     title: "In-Company",
-    duration: "Flexible",
-    desc: "Llevamos el programa directamente a tus instalaciones.",
+    duration: "8 meses +",
+    desc: "Llevamos el programa directamente a tus instalaciones con instructores en vivo.",
     icon: "🏢",
     color: "#7C3AED",
   },
   {
-    title: "Online Asíncrono",
-    duration: "A tu ritmo",
-    desc: "Contenido grabado + soporte vivo. Ideal para equipos remotos.",
-    icon: "🌐",
+    title: "Híbrido Corporativo",
+    duration: "8 meses +",
+    desc: "Combinación perfecta entre sesiones presenciales y plataforma 24/7.",
+    icon: "📚",
     color: "#10B981",
+  },
+  {
+    title: "Alta Dirección",
+    duration: "8 meses +",
+    desc: "Consultoría tecnológica estratégica enfocada en líderes y toma de decisiones.",
+    icon: "⚡",
+    color: "#FF6B35",
   },
 ];
 
@@ -128,89 +128,91 @@ export function Capacitaciones() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 w-full">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <AnimatedSection direction="left">
-              <div
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm mb-8 bg-blue-50 dark:bg-blue-900/10"
-                style={{
-                  color: "#00C9FF",
-                  border: "1px solid rgba(0,201,255,0.25)",
-                }}
-              >
-                <Zap size={14} />
-                <span>Soluciones para empresas</span>
-              </div>
-
-              <h1
-                className="text-gray-900 dark:text-white mb-6 transition-colors duration-300"
-                style={{
-                  fontSize: "clamp(2.2rem, 5vw, 4rem)",
-                  fontWeight: 900,
-                  lineHeight: 1.1,
-                  letterSpacing: "-0.02em",
-                }}
-              >
-                Transforma tu equipo.
-                <br />
-                <span
+            <div>
+              <AnimatedSection direction="left">
+                <div
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm mb-8 bg-blue-50 dark:bg-blue-900/10"
                   style={{
-                    background: "linear-gradient(90deg, #00C9FF, #7C3AED)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
+                    color: "#00C9FF",
+                    border: "1px solid rgba(0,201,255,0.25)",
                   }}
                 >
-                  Transforma tu empresa.
-                </span>
-              </h1>
+                  <Zap size={14} />
+                  <span>Soluciones para empresas</span>
+                </div>
 
-              <p
-                className="text-gray-600 dark:text-white/65 mb-8 transition-colors duration-300"
-                style={{ fontSize: "1.15rem", lineHeight: 1.7 }}
-              >
-                Soluciones tecnológicas 100% personalizadas para empresas y gobierno.
-                Diagnóstico previo, contenido relevante y resultados medibles.
-              </p>
-
-              <div className="grid grid-cols-2 gap-3 mb-8">
-                {[
-                  "85+ empresas capacitadas",
-                  "Contenido 100% personalizado",
-                  "Formatos flexibles",
-                  "Métricas de impacto post-capacitación",
-                ].map((item) => (
-                  <div key={item} className="flex items-center gap-2">
-                    <CheckCircle size={16} className="text-[#00C9FF] shrink-0" />
-                    <span className="text-gray-600 dark:text-white/65 text-sm transition-colors duration-300">{item}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="https://wa.me/5612668168?text=Hola,%20quiero%20información%20sobre%20soluciones%20para%20mi%20organización"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-3 px-8 py-4 rounded-2xl text-white font-bold"
+                <h1
+                  className="text-gray-900 dark:text-white mb-6 transition-colors duration-300"
                   style={{
-                    background: "linear-gradient(135deg, #00C9FF, #7C3AED)",
-                    boxShadow: "0 8px 30px rgba(0,201,255,0.3)",
-                    transition: "all 0.2s ease",
-                    fontSize: "1rem",
+                    fontSize: "clamp(2.2rem, 5vw, 4rem)",
+                    fontWeight: 900,
+                    lineHeight: 1.1,
+                    letterSpacing: "-0.02em",
                   }}
-                  onMouseEnter={(e) => { e.currentTarget.style.transform = "scale(1.03)"; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.transform = "scale(1)"; }}
                 >
-                  <MessageCircle size={18} />
-                  Solicitar cotización
-                </a>
-                <Link
-                  to="/contacto"
-                  className="flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-semibold border transition-all duration-300 text-gray-900 dark:text-white border-gray-300 dark:border-white/25 hover:bg-gray-100 dark:hover:bg-white/10"
+                  Capacitación Corporativa.
+                  <br />
+                  <span
+                    style={{
+                      background: "linear-gradient(90deg, #00C9FF, #7C3AED)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                    }}
+                  >
+                    A la medida de tu empresa.
+                  </span>
+                </h1>
+
+                {/* TEXTO OFICIAL INCORPORADO */}
+                <p
+                  className="text-gray-600 dark:text-white/65 mb-8 transition-colors duration-300"
+                  style={{ fontSize: "1.15rem", lineHeight: 1.7 }}
                 >
-                  Formulario de contacto
-                  <ArrowRight size={16} />
-                </Link>
-              </div>
-            </AnimatedSection>
+                  Programas de formación tecnológica, liderazgo e inclusión digital diseñados a la medida de los objetivos de tu empresa.
+                </p>
+
+                <div className="grid grid-cols-2 gap-3 mb-8">
+                  {[
+                    "85+ empresas capacitadas",
+                    "Planes desde $1600",
+                    "Duración de 8 meses +",
+                    "Formación 100% Personalizada",
+                  ].map((item) => (
+                    <div key={item} className="flex items-center gap-2">
+                      <CheckCircle size={16} className="text-[#00C9FF] shrink-0" />
+                      <span className="text-gray-600 dark:text-white/65 text-sm font-semibold transition-colors duration-300">{item}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a
+                    href="https://wa.me/5612668168?text=Hola,%20quiero%20información%20sobre%20la%20Capacitación%20Corporativa%20para%20mi%20organización"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-3 px-8 py-4 rounded-2xl text-white font-bold"
+                    style={{
+                      background: "linear-gradient(135deg, #00C9FF, #7C3AED)",
+                      boxShadow: "0 8px 30px rgba(0,201,255,0.3)",
+                      transition: "all 0.2s ease",
+                      fontSize: "1rem",
+                    }}
+                    onMouseEnter={(e) => { e.currentTarget.style.transform = "scale(1.03)"; }}
+                    onMouseLeave={(e) => { e.currentTarget.style.transform = "scale(1)"; }}
+                  >
+                    <MessageCircle size={18} />
+                    Solicitar cotización
+                  </a>
+                  <Link
+                    to="/contacto"
+                    className="flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-semibold border transition-all duration-300 text-gray-900 dark:text-white border-gray-300 dark:border-white/25 hover:bg-gray-100 dark:hover:bg-white/10"
+                  >
+                    Formulario de contacto
+                    <ArrowRight size={16} />
+                  </Link>
+                </div>
+              </AnimatedSection>
+            </div>
 
             {/* Stats */}
             <AnimatedSection direction="right" delay={100}>
@@ -218,8 +220,8 @@ export function Capacitaciones() {
                 {[
                   { number: "85+", label: "Empresas", sub: "capacitadas con éxito", color: "#00C9FF" },
                   { number: "5,000+", label: "Profesionales", sub: "capacitados en total", color: "#7C3AED" },
-                  { number: "93%", label: "Satisfacción", sub: "promedio corporativo", color: "#10B981" },
-                  { number: "6", label: "Modalidades", sub: "de entrega disponibles", color: "#FF6B35" },
+                  { number: "8 m+", label: "Duración", sub: "garantizada de programa", color: "#10B981" },
+                  { number: "$1600", label: "Inversión", sub: "planes desde", color: "#FF6B35" },
                 ].map((s) => (
                   <div
                     key={s.label}
@@ -260,7 +262,7 @@ export function Capacitaciones() {
         <div className="max-w-7xl mx-auto">
           <AnimatedSection className="text-center mb-10">
             <p className="text-gray-400 dark:text-white/40 text-sm uppercase tracking-widest transition-colors duration-300">
-              Empresas que confían en GOKU LAB
+              Empresas que confían en GŌKU LAB
             </p>
           </AnimatedSection>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -344,7 +346,7 @@ export function Capacitaciones() {
                   border: "1px solid rgba(0,201,255,0.25)",
                 }}
               >
-                La solución GOKU LAB
+                La solución GŌKU LAB
               </div>
               <h2
                 className="text-gray-900 dark:text-white mb-6 transition-colors duration-300"
@@ -519,6 +521,17 @@ export function Capacitaciones() {
       >
         <div className="max-w-4xl mx-auto text-center">
           <AnimatedSection>
+            <div
+              className="inline-block px-6 py-2 rounded-full text-sm font-bold mb-6"
+              style={{
+                background: theme === "dark" ? "rgba(0,201,255,0.1)" : "rgba(0,201,255,0.1)",
+                color: "#00C9FF",
+                border: "1px solid rgba(0,201,255,0.3)"
+              }}
+            >
+              🚀 Planes corporativos desde $1600
+            </div>
+            
             <h2
               className="text-gray-900 dark:text-white mb-4 transition-colors duration-300"
               style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 900 }}
@@ -531,16 +544,15 @@ export function Capacitaciones() {
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                cotización personalizada
+                cotización
               </span>
             </h2>
             <p
               className="text-gray-600 dark:text-white/60 mb-10 max-w-2xl mx-auto transition-colors duration-300"
               style={{ fontSize: "1.1rem" }}
             >
-              Sin precios genéricos. Cada empresa es diferente y merece una
-              propuesta a su medida. Contáctanos y diseñamos el programa perfecto
-              para tu equipo.
+              Cada empresa es diferente y merece una propuesta tecnológica a su medida. 
+              Contáctanos y diseñamos el programa perfecto para tu equipo.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
               <a
@@ -558,7 +570,7 @@ export function Capacitaciones() {
                 onMouseLeave={(e) => { e.currentTarget.style.transform = "scale(1)"; }}
               >
                 <MessageCircle size={22} />
-                Solicitar cotización gratis
+                Contactar a un asesor
               </a>
               <Link
                 to="/contacto"
@@ -567,11 +579,6 @@ export function Capacitaciones() {
                 Formulario de contacto
                 <ArrowRight size={18} />
               </Link>
-            </div>
-            <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-500 dark:text-white/40 transition-colors duration-300">
-              {["✅ Sin costo de diagnóstico", "✅ Propuesta en 48 hrs", "✅ Sin compromiso de contrato"].map(
-                (i) => <span key={i}>{i}</span>
-              )}
             </div>
           </AnimatedSection>
         </div>

@@ -15,7 +15,7 @@ const phases = [
     desc: "Todo comienza entendiendo quién eres, qué quieres lograr y desde dónde partes.",
     items: [
       "Entrevista de orientación (30 min)",
-      "Test de intereses y habilidades",
+      "Diagnóstico de intereses y habilidades",
       "Definición de objetivos claros",
       "Recomendación de ruta personalizada",
     ],
@@ -114,7 +114,7 @@ export function Metodologia() {
                 border: "1px solid rgba(0,201,255,0.25)",
               }}
             >
-              Metodología GOKU LAB
+              Metodología GŌKU LAB
             </div>
             <h1
               className="text-gray-900 dark:text-white mb-6 transition-colors duration-300"
@@ -155,7 +155,7 @@ export function Metodologia() {
               className="text-gray-900 dark:text-white mb-4 transition-colors duration-300"
               style={{ fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800 }}
             >
-              El proceso GOKU LAB
+              El proceso GŌKU LAB
             </h2>
             <p className="text-gray-600 dark:text-white/60 max-w-2xl mx-auto transition-colors duration-300">
               4 fases diseñadas para llevar a cada alumno desde donde está hasta
@@ -338,7 +338,7 @@ export function Metodologia() {
             {[
               {
                 emoji: "🧒",
-                title: "Para niños y adolescentes",
+                title: "Para niñas, niños y adolescentes",
                 color: "#FF6B35",
                 desc: "Gamificación, proyectos creativos, ritmo dinámico y mucha diversión. Aprendizaje que no se siente como escuela.",
                 points: [

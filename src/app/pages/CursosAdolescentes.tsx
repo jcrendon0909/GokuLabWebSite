@@ -654,7 +654,7 @@ export function CursosAdolescentes() {
                 to="/test"
                 className="flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold border transition-all duration-300 text-gray-900 dark:text-white border-gray-300 dark:border-white/25 hover:bg-gray-100 dark:hover:bg-white/10"
               >
-                Test de orientación
+                Diagnóstico de orientación
                 <ChevronRight size={16} />
               </Link>
             </div>

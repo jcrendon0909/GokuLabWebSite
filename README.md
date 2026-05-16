@@ -1,10 +1,10 @@
-# GOKU LAB Academy — Sitio Web Institucional
+# GŌKU LAB Academy — Sitio Web Institucional
 
-Sitio web oficial de **GOKU LAB**, laboratorio educativo de programación, robótica e inteligencia artificial para niños, adolescentes y adultos ubicado en Naucalpan de Juárez, México.
+Sitio web oficial de **GŌKU LAB**, laboratorio educativo de programación, robótica e inteligencia artificial para niños, adolescentes y adultos ubicado en Naucalpan de Juárez, México.
 
 ## Descripción
 
-Este proyecto es el sitio web institucional de GOKU LAB, desarrollado como proyecto de Prácticas Profesionales de la Licenciatura en Matemáticas Aplicadas y Computación de la FES Acatlán, UNAM.
+Este proyecto es el sitio web institucional de GŌKU LAB, desarrollado como proyecto de Prácticas Profesionales de la Licenciatura en Matemáticas Aplicadas y Computación de la FES Acatlán, UNAM.
 
 El sitio funciona como principal canal de captación de alumnos, comunicando de forma clara y atractiva la oferta de cursos, metodología educativa y medios de contacto de la academia.
 
@@ -25,7 +25,7 @@ El sitio funciona como principal canal de captación de alumnos, comunicando de 
 - Animaciones fluidas
 - Multiidioma (español, inglés y portugués)
 - Botón flotante de WhatsApp
-- Test de orientación vocacional interactivo
+- Diagnóstico de orientación vocacional interactivo
 
 ## Cómo ejecutar el proyecto
 
@@ -44,3 +44,4 @@ npm run dev
 **Arturo Daniel Méndez Amel**
 Estudiante de Matemáticas Aplicadas y Computación
 FES Acatlán, UNAM — Prácticas Profesionales 2026
+
